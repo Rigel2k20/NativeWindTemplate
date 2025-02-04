@@ -1,50 +1,32 @@
-# Welcome to your Expo app 👋
+# NativeWind Template
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a fresh template built with NativeWind, a utility-first CSS framework for React Native applications. It provides a solid foundation for building responsive and modern mobile applications with ease.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Utility-First Approach**: Leverage the power of utility classes to style your components quickly and efficiently.
+- **Responsive Design**: Easily create responsive layouts that adapt to different screen sizes.
+- **Customizable**: Extend and customize the theme to match your design requirements.
+- **Modern Development Practices**: Built with the latest React Native best practices in mind.
 
+## Getting Started
+
+To get started with this template, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Rigel2k20/NativeWindTemplate.git
+   cd NativeWindTemplate
+   ```   
+
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+   
+3. **Run the Project**:
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+4. 
