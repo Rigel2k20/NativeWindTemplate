@@ -28,5 +28,4 @@ To get started with this template, follow these steps:
    ```bash
    npx expo start
    ```
-
-4. 
+4. **Enjoy**!
