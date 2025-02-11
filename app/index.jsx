@@ -1,11 +1,25 @@
-import { Image, ScrollView, Text, View, StyleSheet } from "react-native";
+import { Image, Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import  Colors  from "../constant/Colors"
 import {useRouter} from "expo-router";
+import {onAuthStateChanged} from 'firebase/auth'
+import {auth, db} from './../config/firebaseConfig'
+import {getDoc, doc} from "firebase/firestore";
+import {useContext} from "react";
+import {UserDetailContext} from "../context/UserDetailContext";
 
 
 export default function Index() {
 
     const router=useRouter();
+    const {userDetail, setUserDetail} = useContext(UserDetailContext)
+    onAuthStateChanged(auth, async(user)=>{
+        if(user){
+            const docRef = doc(db, 'users', user.email);
+            const result = await getDoc(docRef);
+            setUserDetail(result.data());
+            router.replace('/(tabs)/home');
+        }
+    })
   return (
 
     <View style={{
@@ -41,14 +55,16 @@ export default function Index() {
                 textAlign:'center',
                 fontFamily:'outfit'
             }}> Transform your life by learning new Skills</Text>
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button}
+                          onPress={()=>router.push('/auth/signUp')}
+        >
             <Text style={[
                 styles.buttonText, {
                 fontFamily:'outfit-bold',
                 color: Colors.PRIMARY
             }]}>Get Started</Text>
-        </View>
-            <View style={[
+        </TouchableOpacity>
+            <TouchableOpacity onPress={()=>router.push('/auth/signIn')} style={[
                 styles.button,{
                 backgroundColor: Colors.PRIMARY,
                 borderWidth:1,
@@ -59,7 +75,7 @@ export default function Index() {
                     fontFamily:'outfit-bold',
                     color:Colors.WHITE,
                 }]}>Already have an Account?</Text>
-            </View>
+            </TouchableOpacity>
         </View>
 
       </View>
