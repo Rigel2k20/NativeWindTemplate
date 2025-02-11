@@ -29,4 +29,4 @@ To get started with this template, follow these steps:
    npx expo start
    ```
 
-4. 
+4. Enjoy!"# Coursor" 
